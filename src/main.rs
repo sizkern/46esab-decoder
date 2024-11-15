@@ -1,7 +1,7 @@
 use base64::{engine::general_purpose, Engine as _};
 
 fn main() {
-    let mut encoded = "0XeoBXYyd2b0BXeyN2X09mbgMXafNXaoR3eTJEV".chars().rev().collect::<String>();
+    let mut encoded = "".chars().rev().collect::<String>();
 
     for _ in 0..5 {
         if let Ok(decoded) = general_purpose::STANDARD.decode(encoded.as_bytes()) {
